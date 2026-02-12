@@ -1,0 +1,48 @@
+<div class="avatar">👨‍⚕️</div>
+            <h3>د. أحمد علي</h3>
+            <p class="specialty">أخصائي أمراض باطنية</p>
+            <a href="https://wa.me/964000000000?text=السلام عليكم دكتور، أحتاج استشارة من مبادرة خذ بيدي" class="btn-whatsapp" target="_blank">تواصل عبر واتساب</a>
+        </div>
+
+        <div class="doctor-card" data-name="د. سارة محمود" data-spec="أطفال">
+            <div class="avatar">👩‍⚕️</div>
+            <h3>د. سارة محمود</h3>
+            <p class="specialty">أخصائية طب الأطفال</p>
+            <a href="https://wa.me/964000000000?text=السلام عليكم دكتورة، أحتاج استشارة من مبادرة خذ بيدي" class="btn-whatsapp" target="_blank">تواصل عبر واتساب</a>
+        </div>
+
+        <div class="doctor-card" data-name="د. محمد حسن" data-spec="قلبية">
+            <div class="avatar">👨‍⚕️</div>
+            <h3>د. محمد حسن</h3>
+            <p class="specialty">استشاري أمراض القلب</p>
+            <a href="https://wa.me/964000000000?text=السلام عليكم دكتور، أحتاج استشارة من مبادرة خذ بيدي" class="btn-whatsapp" target="_blank">تواصل عبر واتساب</a>
+        </div>
+
+        </div>
+</div>
+
+<footer>
+    <p class="footer-logo">مؤسسة عطاء العقيلة التنموية</p>
+    <p>جميع الحقوق محفوظة &copy; 2026</p>
+</footer>
+
+<script>
+    function filterDoctors() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let cards = document.getElementsByClassName('doctor-card');
+
+        for (let i = 0; i < cards.length; i++) {
+            let name = cards[i].getAttribute('data-name').toLowerCase();
+            let spec = cards[i].getAttribute('data-spec').toLowerCase();
+            
+            if (name.includes(input) || spec.includes(input)) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
